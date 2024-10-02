@@ -6,9 +6,12 @@ public class Main {
         browseHistory.push("a");
         browseHistory.push("b");
         browseHistory.push("c");
-        for(int i=0;i<browseHistory.getUrls().size();i++){
-            var url = browseHistory.getUrls().get(i);
+
+        Iterator iterator = browseHistory.createIterator();
+        while(iterator.hasNext()) {
+            var url = iterator.current();
             System.out.println(url);
+            iterator.next();
         }
     }
 }
