@@ -6,11 +6,13 @@ public class Main {
         browseHistory.push("a");
         browseHistory.push("b");
         browseHistory.push("c");
+        browseHistory.push("d");
 
         Iterator iterator = browseHistory.createIterator();
         while(iterator.hasNext()) {
             var url = iterator.current();
-            System.out.println(url);
+            if(url != null)
+                System.out.println(url);
             iterator.next();
         }
     }
